@@ -61,7 +61,7 @@ article:nth-of-type(even) {
 }
 
 /* добавляем к заголовкам пeрвых 2х новостей слово "New" */
-h2[class="new"]::after {
+h2[content="new"]::after {
     content: "New";
     padding: 5px 15px 5px 15px; 
     color: #000;
