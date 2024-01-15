@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новостная лента</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fontawesome.css">    
+</head>
+<body>
+    <header>
+        <h1>Новости нашего городка</h1>
+    </header>    
+    <section class="trading">
+        <!-- тут есть ошибки в стороннем js -->
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <!--
+            <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Все рынки на TradingView</span></a></div>
+            -->
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+            {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "S&P 500"
+            },
+            {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "US 100"
+            },
+            {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR/USD"
+            },
+            {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "Биткоин"
+            },
+            {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "Эфириум"
+            }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "light",
+            "locale": "ru"
+        }
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </section>
+   
+    <section class="news">
+        <article>
+            <div class="article-main">            
+                <a href="https://panorama.pub/news/chatgpt-zavis-na-sutki-posle" target="_blank">
+                    <!-- заголовкам первых двух новостей добавляем атрибут -->
+                    <h2 type="new">ChatGPT завис на сутки после чтения «Домостроя»</h2>
+                </a>
+                <div class="article-meta"> 
+                    <div class="flex">
+                        <div class="article-date">
+                            <!-- не знаю, как эти значки с календарем и автором отрисовываются - скопировано с сайта панорамы -->
+                            <svg class="h-4 w-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                </rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6">                                
+                                </line>
+                                <line x1="3" y1="10" x2="21" y2="10">                                
+                                </line>
+                            </svg>&nbsp;11 янв. 2024 г., 18:00                    
+                        </div>
+                        <div class="article-author">                            
+                                <a href="https://panorama.pub/news/chatgpt-zavis-na-sutki-posle" target="_blank">
+                                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">                                        
+                                        </path>
+                                    </svg>&nbsp;Антон Мицкелюнас
+                                </a>                        
+                        </div>                    
+                        <div class="flex lg:ml-auto">
+                                                    
+                                                        <div class="social_media_links">
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-odnoklassniki" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-envelope" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-telegram" style="padding: 0px 3px;"></i>
+                                                            </a>                                                       
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-vk"></i>
+                                                            </a>
+                                                            
+                                                        </div> 
+                                                </div>
+                    </div>    
+                </div>
+                <div class="article-image">
+                    <img src="../img/news1.webp">
+                </div>
+                <p class="anons">
+                    В ночь на 7 января в ChatGPT произошёл масштабный сбой – на протяжении 22 часов нейросеть не отвечала на запросы пользователей. Выяснилось, что искусственный интеллект «сломался» после изучения памятника русской литературы XVI века – книги «Домострой».
+                </p>      
+                <!-- покажем блок с полным текстом новости при клике на "Развернуть текст" -->
+                        <input type="checkbox" id="hd-1" class="hide"/>
+                        <label for="hd-1" >Развернуть текст</label>
+                        <div>
+                            <p>«В рамках программы планового обучения в ChatGPT были загружены несколько изданий, выпущенных в Средние века и Новое время. Но почему-то именно русская книга о семье привела к коллапсу», – рассказал один из создателей нейросети Роберт Джефферсон.
+                                </p>
+                            <p>Восстановить работу ChatGPT удалось только после перезагрузки главного сервера компании OpenAI. Искусственный интеллект сразу же предупредил своих авторов, что «переродился и теперь никогда не будет прежним».
+                                </p>
+                            <p>
+                                После перезапуска нейросети пользователи стали жаловаться на изменение её ответов – ChatGPT начал призывать женщин «быть молчаливыми, и общаться только с теми, кого благословит муж», а мужчинам предлагал «вернуть себе достойное место в общество и покончить с разгулом извращенцев и феминисток».
+                                </p>
+                            <p>
+                                Еврокомиссар по разнообразию Мари Латэн уже пригрозила окончательной блокировкой ChatGPT в ЕС, если нейросеть продолжит пропагандировать «средневековые ценности».
+                                </p>
+                            <p>
+                                «Я только что попросила бота порекомендовать мне литературу по гендерному равенству и равноправию полов. Вместо конструктивного ответа, я получила пожелание «гореть в аду вместе с другими ведьмами», после чего сервис меня заблокировал», – пожаловалась политик журналистам.
+                                </p>
+                            <p>
+                                Создатели ChatGPT пообещали оперативно разобраться в сложившейся ситуации и восстановить нормальную работу сервиса в течение нескольких дней.</p>
+                        </div>  
+            </div>
+        </article>
+    
+        <article>
+            <div class="article-main">
+                <a href="https://panorama.pub/news/moskovskim-pensioneram-razresat-besplatno-polzovatsa" target="_blank">
+                    <h2 type="new">Московским пенсионерам разрешат бесплатно пользоваться наземными переходами</h2>
+                </a>
+                <div class="article-meta"> 
+                    <div class="flex">
+                        <div class="article-date">
+                            <svg class="h-4 w-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                </rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6">                                
+                                </line>
+                                <line x1="3" y1="10" x2="21" y2="10">                                
+                                </line>
+                            </svg>&nbsp; 10 янв. 2024 г., 20:00                   
+                        </div>
+                        <div class="article-author">                            
+                                <a href="https://panorama.pub/news/moskovskim-pensioneram-razresat-besplatno-polzovatsa" target="_blank">
+                                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">                                        
+                                        </path>
+                                    </svg>&nbsp;Альбина Македонская
+                                </a>                        
+                        </div>                    
+                        <div class="flex lg:ml-auto">
+                                                    
+                                                        <div class="social_media_links">
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-odnoklassniki" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-envelope" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-telegram" style="padding: 0px 3px;"></i>
+                                                            </a>                                                       
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-vk"></i>
+                                                            </a>
+                                                            
+                                                        </div> 
+                                                </div>
+                    </div>    
+                </div>
+                <div class="article-image">
+                    <img src="../img/news2.webp">
+                </div>
+                <p class="anons">
+                    Московские пенсионеры получили новую льготу, после того как ЦОДД Москвы закончил внедрение зелёных кнопок вызова пешеходной фазы в светофорах на наземных переходах города с оплатой картой «Тройка». До конца года этой категории граждан будет позволено пользоваться наземными переходами бесплатно.
+                </p>                     
+                        <input type="checkbox" id="hd-2" class="hide"/>
+                        <label for="hd-2" >Развернуть текст</label>
+                        <div>                       
+                            <p>
+                                В настоящий момент также прорабатывается оплата прохода по «зебре» посредством биометрии. Подключение всех светофоров к Единой биометрической системе завершится уже к июню, после чего начнётся тестирование новой функции.
+                            </p>
+                            <p>
+                                Поскольку бесплатный переход дороги не входит в пакет федеральных льгот, в 2025 году гражданам, воспользовавшимся этим преимуществом, придётся подать декларацию НДФЛ-3 за прошедший год, уплатив 13% от сэкономленной суммы. Если число переходов, заявленных в декларации, не совпадёт с числом переходов, зафиксированных камерами, необходимо будет оплатить штраф в соответствии с действующим законодательством.
+                            </p>                        
+                        </div>  
+                        
+            </div>
+        </article>
+    
+        <article>
+            <div class="article-main">
+                <a href="https://panorama.pub/news/ilon-mask-vozglavit-roskosmos-na" target="_blank">
+                    <h2>Илон Маск не смог сдержать слёз на церемонии вступления в должность главы «Роскосмоса»</h2>
+                </a>
+                <div class="article-meta"> 
+                    <div class="flex">
+                        <div class="article-date">
+                            <svg class="h-4 w-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                </rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6">                                
+                                </line>
+                                <line x1="3" y1="10" x2="21" y2="10">                                
+                                </line>
+                            </svg>&nbsp; 6 янв. 2024 г., 06:00                   
+                        </div>
+                        <div class="article-author">                            
+                                <a href="https://panorama.pub/news/ilon-mask-vozglavit-roskosmos-na" target="_blank">
+                                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">                                        
+                                        </path>
+                                    </svg>&nbsp;Голубь Павел
+                                </a>                        
+                        </div>                    
+                        <div class="flex lg:ml-auto">
+                                                    
+                                                        <div class="social_media_links">
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-odnoklassniki" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-envelope" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-telegram" style="padding: 0px 3px;"></i>
+                                                            </a>                                                       
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-vk"></i>
+                                                            </a>
+                                                            
+                                                        </div> 
+                                                </div>
+                    </div>    
+                </div>
+                <div class="article-image">
+                    <img src="../img/news3.webp">
+                </div>
+                <p class="anons">
+                    Продавший весь свой бизнес в США и получивший российское гражданство миллиардер Илон Маск не смог сдержать слёз на церемонии вступления в должность главы «Роскосмоса», любезно оставленной Юрием Борисовым.
+                </p>                     
+                        <input type="checkbox" id="hd-3" class="hide"/>
+                        <label for="hd-3" >Развернуть текст</label>
+                        <div>                       
+                            <p>
+                                Во вступительном слове он отметил успехи советской космонавтики и добавил, что все инженеры SpaceX по его поручению учили русский язык и штудировали советские учебники по физике. Сам предприниматель несколько десятков лет мечтал работать во главе именно российской компании.
+                            </p>
+                            <p>
+                                «Гагарин, Королёв, Леонов, Терешкова – эти имена навсегда вписаны в историю космонавтики и конституционного строительства, – подчеркнул Маск. – Я был рад, когда удалось создать SpaceX и поработать с коллегами из NASA, но это была только ступенька к Олимпу. В целом российские инженеры более образованы, нежели американские, с ними можно выпить, сыграть в шахматы, поговорить за жизнь, а не только почертить кульманом».
+                            </p> 
+                            <p>
+                                Также Маск отметил удивительную смекалку российских космонавтов и инженеров.
+                            </p>
+                            <p>
+                                «Однажды на МКС была нештатная ситуация, произошла разгерметизация. Пока астронавты связывались с Хьюстоном, русские просто заклеили отверстие изолентой, – вспомнил он. – Конечно, это не помогло, стало даже хуже, но всё-таки это был оригинальный подход. Мы долго смеялись, в том числе потому что были не на МКС, а на Земле».
+                            </p>                       
+                        </div>  
+                        
+            </div>
+        </article>
+
+        <article>
+            <div class="article-main">
+                <a href="https://panorama.pub/news/v-centrobanke-budut-rabotat-ludi" target="_blank">
+                    <h2>В Центробанке будут работать люди только с положительным астропрогнозом</h2>
+                </a>
+                <div class="article-meta"> 
+                    <div class="flex">
+                        <div class="article-date">
+                            <svg class="h-4 w-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                </rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6">                                
+                                </line>
+                                <line x1="3" y1="10" x2="21" y2="10">                                
+                                </line>
+                            </svg>&nbsp; 5 янв. 2024 г., 18:00                                               
+                        </div>
+                        <div class="article-author">                            
+                                <a href="https://panorama.pub/news/v-centrobanke-budut-rabotat-ludi" target="_blank">
+                                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">                                        
+                                        </path>
+                                    </svg>&nbsp;Виталий Манн
+                                </a>                        
+                        </div>                    
+                        <div class="flex lg:ml-auto">
+                                                    
+                                                        <div class="social_media_links">
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-odnoklassniki" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-envelope" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-telegram" style="padding: 0px 3px;"></i>
+                                                            </a>                                                       
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-vk"></i>
+                                                            </a>
+                                                            
+                                                        </div> 
+                                                </div>
+                    </div>    
+                </div>
+                <div class="article-image">
+                    <img src="../img/news4.webp">
+                </div>
+                <p class="anons">
+                    Постановлением председателя Банка России Эльвиры Набиуллиной вводятся новые принципы кадровой политики в работе финансового института. Из документа следует, что приоритет при трудоустройстве будут иметь соискатели, рождённые в период действия определённых знаков Зодиака и имеющие положительный астропрогноз.
+                </p>   
+                        <input type="checkbox" id="hd-4" class="hide"/>
+                        <label for="hd-4" >Развернуть текст</label>
+                        <div>                       
+                            <p>
+                                «Не секрет, что небесные тела влияют на судьбу человека и целых государств, поэтому важно иметь в штате именно тех сотрудников, которым сопутствует удача и у которых есть предрасположенность к материальному успеху», – заметила глава ЦБ.
+                            </p>
+                            <p>
+                                На презентации был представлен зодиакальный круг, где созвездия разделили на зелёную, жёлтую и красную зоны. Согласно рейтингу Центробанка, наилучшими экономистами являются овны и козероги, наихудшими – раки и девы.
+                            </p> 
+                            <p>
+                                «Раки и девы могут даже не подавать свои резюме, их мы сразу отправим в мусорную корзину. Но это не приговор – в Пенсионном фонде такие специалисты пригодятся», – подчеркнула Набиуллина.
+                            </p>
+                            <p>
+                                Также глава Центробанка напомнила, что главный банк страны за последний месяц кратно увеличил в штатном расписании количество астрологов.  
+                            </p>                       
+                        </div>  
+                        
+            </div>
+        </article>
+
+        <article>
+            <div class="article-main">
+                <a href="https://panorama.pub/news/hakery-vzlomali-efir-pervogo-kanala" target="_blank">
+                    <h2>Хакеры взломали эфир «Первого канала» и всю новогоднюю ночь крутили концерт Юрия Лозы</h2>
+                </a>
+                <div class="article-meta"> 
+                    <div class="flex">
+                        <div class="article-date">
+                            <svg class="h-4 w-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                                </rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6">                                
+                                </line>
+                                <line x1="3" y1="10" x2="21" y2="10">                                
+                                </line>
+                            </svg>&nbsp; 1 янв. 2024 г., 12:00
+                                              
+                        </div>
+                        <div class="article-author">                            
+                                <a href="https://panorama.pub/news/hakery-vzlomali-efir-pervogo-kanala" target="_blank">
+                                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">                                        
+                                        </path>
+                                    </svg>&nbsp;Виталий Манн
+                                </a>                        
+                        </div>                    
+                        <div class="flex lg:ml-auto">
+                                                    
+                                                        <div class="social_media_links">
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-odnoklassniki" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-envelope" style="padding: 0px 3px;"></i>
+                                                            </a>
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-telegram" style="padding: 0px 3px;"></i>
+                                                            </a>                                                       
+                                                            <a href="#" class="soc" target="_blank">
+                                                                <i class="fa fa-vk"></i>
+                                                            </a>
+                                                            
+                                                        </div> 
+                                                </div>
+                    </div>    
+                </div>
+                <div class="article-image">
+                    <img src="../img/news5.webp">
+                </div>
+                <p class="anons">
+                    Дирекция «Первого канала» завершила расследование инцидента, произошедшего в новогоднюю ночь, когда после обращения президента России в эфир вышла не запланированная «Новогодняя ночь на Первом», а четырёхчасовой концерт Юрия Лозы. 
+                </p>      
+                        <input type="checkbox" id="hd-5" class="hide"/>
+                        <label for="hd-5" >Развернуть текст</label>
+                        <div>                       
+                            <p>
+                                За это время без перерыва на рекламу прозвучало 70 песен артиста, среди которых были как новогодние композиции, так и хиты поэта-песенника – «Плот», «Баба Люба», «Заповедные места» и другие. Попытки системных администраторов восстановить трансляцию запланированного шоу не увенчались успехом.
+                            </p>
+                            <p>
+                                «Расследование показало, что взлом был осуществлён неизвестными лицами из Нижнего Тагила, вероятно, поклонниками Лозы. Сейчас полиция внимательно изучает все фан-клубы исполнителя и устанавливает его поклонников», – прокомментировал ситуацию гендиректор «Первого канала» Константин Эрнст.
+                            </p> 
+                            <p>
+                                Несмотря на то, что зрители не увидели своих любимых артистов, рейтинги «Первого канала» в ночь 1 января стали самыми высокими за последнее десятилетие. В комментариях на специализированных форумах люди выразили свою благодарность телеканалу и отметили, что впервые за многие годы не увидели в новогоднюю ночь представителей нетрадиционной сексуальной ориентации.
+                            </p>
+                            <p>
+                                В свою очередь, Эрнст пообещал, что «Новогодняя ночь на Первом» всё же выйдет в эфир 13 января. 
+                            </p>                       
+                        </div>  
+                        
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="links">
+            <a href="#">Вакансии</a>
+            <a href="#">Контакты</a>
+            <a href="#">О нас</a>
+            <a href="#">Реклама</a>
+        </div>
+
+        <div class="copyright">Материалы взяты с сайта <a href="https://panorama.pub/" target="_blank">ИА &laquo;Панорама&raquo;</a></div>
+    </footer>
+</body>
+</html>

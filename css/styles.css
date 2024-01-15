@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    font-size:16px;    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: url('../img/top.jpg') center no-repeat;
+    opacity: 0.9;
+    background-size: cover;
+}
+
+h1 {
+    background: rgb(255,255,255,0.8);
+    padding: 10px 60px;
+    border-radius: 6px;
+    color: #ab0c0c;
+    font-size:3rem;
+}
+
+/* тень для блока с бегущей строкой */
+.trading {
+-webkit-box-shadow: 0px 4px 8px 0px rgba(69, 69, 69, 0.2);
+-moz-box-shadow: 0px 4px 8px 0px rgba(69, 69, 69, 0.2);
+box-shadow: 0px 4px 8px 0px rgba(69, 69, 69, 0.2);
+margin:0 0 20px 0;
+}
+/* /тень для блока с бегущей строкой */
+
+.news {
+    background-color: #fff;
+    padding: 30px 0;  
+}
+
+
+
+/* НАЧАЛО основные стили для статьи */
+h2 {
+    font-size:2rem;
+}
+
+.anons {
+    font-style: italic;
+    padding-top:10px;
+    line-height:24px;
+}
+
+article {
+    width: 100%;
+    margin: 0 auto;   
+}
+
+/* задаем цвет фона для четных новостей */
+article:nth-of-type(even) {
+    background-color: #f2f2f2; 
+}
+
+/* добавляем к заголовкам пeрвых 2х новостей слово "New" */
+h2[type="new"]::after {
+    content: "New";
+    padding: 5px 15px 5px 15px; 
+    color: #000;
+    font-size:1.3rem;
+    background-color: #f2f290;
+    margin-left: 20px;
+    border-radius:5px;
+  } 
+
+.article-main {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 6px 30px 30px 30px;  
+}
+
+article a {
+    color: #ab0c0c;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: grey;
+}
+
+article h2 {
+    margin-bottom: 5px;
+}
+
+article-info {
+    color: #ab0c0c;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.article-image {    
+    padding-top:20px;
+}
+
+.article-image img {
+    width: 100%;
+    height: 300px;    
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* скрываем картинки для статей на маленьких экранах */
+@media (max-width: 800px) {
+    .article-image img {
+        display:none;
+    }
+}
+
+/* убираем выравнивание по правому краю для тега статьи на маленьких экранах */
+@media (min-width: 800px){
+.lg\:ml-auto {
+    margin-left: auto;
+}
+}
+
+.article-author {
+    padding: 5px 35px 5px 20px;
+}
+.article-date {
+    padding: 5px 5px 5px 0px;
+}
+.article-meta {  
+    padding-top: 10px;
+}
+/* КОНЕЦ основные стили для статьи */
+
+
+
+/* НАЧАЛО стили с сайта панорамы для блока с датой и автором статьи */
+.w-4 {
+    width: 1rem;
+}
+.h-4 {
+    height: 1rem;
+}
+.inline-block {
+    display: inline-block;
+}
+svg {   
+    vertical-align: middle;
+}
+.flex {
+    display: flex;
+}
+/* КОНЕЦ стили с сайта панорамы для блока с датой и автором статьи */
+
+
+
+/* НАЧАЛО соцсети для статьи */
+.soc {
+    color: #ab0c0c;
+    display: inline-block; 
+    font-size: 26px;
+    font-weight: 400;
+    border: 0;        
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.soc:hover {
+    color: grey;
+}
+
+/* fa - это fontawesome */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/* КОНЕЦ соцсети для статьи */
+
+
+
+/* НАЧАЛО стили для раскрывающегося блока с содержимым новости */
+/* скрываем чекбоксы и блоки с содержанием */
+.hide {
+    display: none; 
+}
+
+.hide + label + div  {
+    display: none;
+}
+
+/* оформляем текст label */
+.hide + label {
+    border-bottom: 1px dotted #ab0c0c;
+    padding: 0;
+    color: #ab0c0c;
+    cursor: pointer;
+    display: inline-block;     
+}
+
+.hide + label:hover {
+    color: grey;
+    border-bottom: 1px dotted grey;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: rgb(155, 155, 155);
+    border-bottom: 0;   
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;  
+    line-height:24px;  
+}
+/* КОНЕЦ стили для раскрывающегося блока с содержимым новости */
+
+
+
+/* НАЧАЛО футер */
+footer {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+    background:#353535;
+}
+
+footer .links {
+    margin-bottom: 50px;
+}
+
+footer .links > a {
+    color: #ffffff;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer .links > a:hover {
+    color: #ab0c0c;    
+}
+
+.copyright {
+    color: #919191;    
+}
+
+.copyright a {
+    color: #919191;
+    border-bottom: 1px dotted #919191;
+    text-decoration:none;
+}
+
+.copyright a:hover {
+    color: #ab0c0c;
+    border-bottom: 1px dotted #ab0c0c;
+    ;
+}
+/* КОНЕЦ футер */
