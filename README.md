@@ -19,4 +19,4 @@
 
 Зайти в папку сайта в файловом менеджере, кликнуть 2 раза по файлу index.html.
 
-Либо открыть в [Pages](https://git-morozova.github.io/HW-03/)
+Либо открыть в [Pages](https://git-morozova.github.io/News_feed_site/)
